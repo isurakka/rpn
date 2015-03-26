@@ -26,7 +26,7 @@ pub fn rpn(raw: &str) -> f64 {
             "*" => do_operation(|l, r| l * r, l, r),
             "/" => 
             {
-                if (r == 0.0)
+                if r == 0.0
                 {
                     panic!("Division by zero not allowed");
                 }
@@ -80,7 +80,7 @@ mod tests {
     #[test]
     fn long_equation() {
         let mut eq = "2 ".to_string();
-        for i in 0..2000000 {
+        for _ in 0..2000000 {
             eq.push_str("2 + ");
         }
 

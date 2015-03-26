@@ -3,5 +3,5 @@ name = "rpn"
 version = "0.0.1"
 authors = ["Iiro Surakka <iiro.surakka@gmail.com>"]
 
-[dependencies]
-docopt = "0.6.54"
+#[dependencies]
+#docopt = "0.6.54"

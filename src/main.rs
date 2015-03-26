@@ -16,9 +16,8 @@ pub fn rpn(raw: &str) -> f64 {
             continue;
         }
 
-        let msg = "Invalid equation. No numbers left in stack for the left side of the operation";
-        let r = stack.pop().expect(msg);
-        let l = stack.pop().expect(msg);
+        let r = stack.pop().expect("Invalid equation. No numbers left in stack for the right side of the operation");
+        let l = stack.pop().expect("Invalid equation. No numbers left in stack for the left side of the operation");
 
         let result = match c {
             "+" => do_operation(|l, r| l + r, l, r),

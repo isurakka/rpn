@@ -78,6 +78,30 @@ mod tests {
     }
 
     #[test]
+    #[should_panic]
+    fn invalid_input_1() {
+        rpn("");
+    }
+
+    #[test]
+    #[should_panic]
+    fn invalid_input_2() {
+        rpn("14 4 6 8 + . /");
+    }
+
+    #[test]
+    #[should_panic]
+    fn invalid_input_3() {
+        rpn("POTATO");
+    }
+
+    #[test]
+    #[should_panic]
+    fn invalid_input_4() {
+        rpn("54 4 6 O + \\ /");
+    }
+
+    #[test]
     fn long_equation() {
         let mut eq = "2 ".to_string();
         for _ in 0..2000000 {
